@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectcropActivity">
+
+    <!-- Text: Select Crop -->
+    <TextView
+        android:id="@+id/selectCropText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Crop"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp" />
+
+    <!-- Text: Crops based on soil characteristics -->
+    <TextView
+        android:id="@+id/soilCharacteristicsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textStyle="bold"
+        android:text="These are the crops recommended based on soil characteristics:"
+        android:textSize="28sp"
+        android:layout_below="@id/selectCropText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- Images and Names of Crops -->
+    <LinearLayout
+        android:id="@+id/cropsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/soilCharacteristicsText"
+        android:layout_marginTop="16dp">
+
+        <!-- First Row of Images -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/lettuce"
+                android:scaleType="fitCenter"
+                android:onClick="highlightCrop"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/cotton"
+                android:onClick="highlightCrop"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:onClick="highlightCrop"
+                android:src="@drawable/mustard"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+        </LinearLayout>
+
+        <!-- Name of Crops -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="highlightCrop"
+                android:text="Lettuce"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="highlightCrop"
+                android:text="Cotton"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="highlightCrop"
+                android:text="Mustard"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Text: Other Crops -->
+    <TextView
+        android:id="@+id/otherCropsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other Crops"
+        android:textSize="18sp"
+        android:layout_below="@id/cropsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+
+    <!-- Images and Names of Crops -->
+    <LinearLayout
+        android:id="@+id/cropsLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/otherCropsText"
+        android:layout_marginTop="16dp">
+
+        <!-- First Row of Images -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/onion"
+                android:onClick="highlightCrop"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:onClick="highlightCrop"
+                android:src="@drawable/potato"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/sugarcane"
+                android:onClick="highlightCrop"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+
+        </LinearLayout>
+
+        <!-- Name of Crops -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Onion"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Potato"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sugarcane"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:layout_below="@id/cropsLayout2"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
